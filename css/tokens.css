@@ -112,6 +112,7 @@
   /* Typografie */
   --font-serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
   --font-sans: "Figtree", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-script: 'Corinthia', 'Newsreader', Georgia, serif;
 
   /* Pohyb */
   --dur-fast: 150ms;    /* barvy, rámečky */
