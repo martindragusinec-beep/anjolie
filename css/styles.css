@@ -201,6 +201,13 @@ h1, h2, h3, h4, p, figure, blockquote { margin: 0; }
   .carousel__arrow[hidden] { display: none !important; }
 }
 
+/* ---------- Zalamování textu ---------- */
+/* Odstavce bez osiřelých slov na konci, nadpisy a krátké středové texty vyvážené */
+p, li, dd, figcaption, blockquote, .pcard__desc, .fservice__desc, .who__sub, .rcard__text, .feature__text, .store__row span, .footer__legal p { text-wrap: pretty; }
+h1, h2, h3, h4, .t-h1, .t-h2, .t-h3, .t-title-l, .t-title-m, .t-title-s, .pcard__name, .acard__title, .ptile__title, .store__name, .line__name, .result__name, .fservice__title { text-wrap: balance; }
+.section-lead, .nl__text, .details__lead, .usp__item span, [style*="text-align:center"] p, .t-center { text-wrap: balance; }
+.nobr { white-space: nowrap; }
+
 /* ---------- Hlavička ---------- */
 .announce { background: var(--color-bg-inverse); color: var(--color-text-inverse); }
 .announce__row { display: flex; align-items: center; gap: 32px; }
@@ -518,11 +525,11 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   .ptile { padding-right: 46%; }
   .ptile__img { width: 42%; }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .promo-grid { display: grid; grid-template-columns: minmax(0, 704fr) minmax(0, 588fr); gap: 20px; }
   .promo-col { display: grid; grid-template-rows: 1fr 1fr; gap: 20px; }
-  .ptile { min-height: 354px; padding: 40px 228px 40px 40px; }
-  .ptile__img { width: 300px; }
+  .ptile { min-height: 354px; padding: 40px clamp(180px, 39%, 228px) 40px 40px; }
+  .ptile__img { width: min(300px, 51%); }
   .ptile__img::before { width: 120px; }
   .ptile__text { font: 400 16px/26px var(--font-sans); }
   .ptile--hero { justify-content: flex-start; min-height: 0; padding: 0; gap: 0; }
@@ -655,7 +662,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
 /* ---------- Newsletter ---------- */
 .nl { display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; }
-.nl__text { max-width: 520px; }
+.nl__text { max-width: 640px; text-wrap: balance; }
 .nl__form { display: flex; flex-direction: column; gap: 16px; width: 100%; max-width: 601px; text-align: left; }
 .nl__field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
 .nl__label { font: 400 14px/22px var(--font-sans); }
@@ -851,4 +858,17 @@ a.contact__row:hover span, .fcol a:hover, .contact__lines a:hover, .flegal a:hov
 /* ---------- Pohyb ---------- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
+
+/* Tablet na šířku 1024-1199: patička a prodejny pod sebou, ať se adresy a odkazy nelámou */
+@media (min-width: 1024px) and (max-width: 1199.98px) {
+  .footer__top { flex-direction: column; gap: 40px; }
+  .contact { flex: none; }
+  .fcols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .stores-wrap { flex-direction: column; align-items: stretch; gap: 32px; }
+  .stores__text { flex: none; max-width: 640px; }
+}
+@media (max-width: 399.98px) {
+  .ptile { padding-right: 140px; }
+  .ptile__img { width: 150px; }
 }
