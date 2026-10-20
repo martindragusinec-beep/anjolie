@@ -37,8 +37,7 @@ Fokus 2 px s odsazením 2 px, dotykové plochy min. 44 px, dialogy (menu, koší
 
 - PSČ sídla v patičce: v obchodních podmínkách je jednou 242 52 a jednou 252 42 (Jesenice u Prahy má 252 42)
 - Texty "k čemu produkt je" na kartách jsou z popisů na anjolie.cz, před spuštěním je projít proti povoleným zdravotním tvrzením (nařízení 1924/2006)
-- Logo PPL doplnit do `img/logos/ppl.svg`
-
+- Sleva 5 % za odběr newsletteru je návrh: potvrdit výši, podmínky (první nákup, jednorázový kód) a nastavit automatický e-mail s kódem po potvrzení odběru
 - URL recenzí na Heurece: `https://obchody.heureka.cz/anjolie-cz/recenze/` (neověřeno)
 - URL produktů a kategorií odpovídají struktuře anjolie.cz, zkontrolovat proti aktuálnímu webu
 - Ceny, hodnocení a sklad v kartách jsou ukázková data z návrhu
