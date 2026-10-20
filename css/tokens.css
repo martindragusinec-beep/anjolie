@@ -1,0 +1,140 @@
+/* Anjolie · design tokens
+ * Vygenerováno z Figma proměnných (soubor VK4UfLudV8qyOyHewqSI6d, kolekce Primitives, Color, Dimension).
+ * Názvy odpovídají Code syntax (WEB) ve Figmě. Komponenty používají jen sémantické tokeny (--color-*, --space-*, --section-*).
+ * Neupravovat ručně: změna patří do Figmy a pak sem.
+ */
+
+:root {
+  /* Primitives */
+  --ink-900: #1C1C28;
+  --ink-800: #2C2C3A;
+  --white: #FFFFFF;
+  --cream-50: #FCF8EC;
+  --cream-100: #F4EEE2;
+  --cream-200: #EAE0CD;
+  --cream-300: #D9CCB9;
+  --gray-50: #F5F5F5;
+  --gray-200: #E6E3DD;
+  --gray-400: #BDB9B1;
+  --gray-600: #51504D;
+  --gray-900: #1F1F1F;
+  --black: #000000;
+  --gold-300: #C1B197;
+  --gold-400: #C49A48;
+  --gold-600: #745E29;
+  --gold-700: #604F33;
+  --green-600: #52833B;
+  --green-700: #3F7A2A;
+  --red-50: #F8E7EB;
+  --red-600: #B33A54;
+  --red-700: #9D475A;
+  --blue-700: #2E5A88;
+  --bronze-700: #9A5B1E;
+
+  /* Color · sémantické */
+  --color-bg-page: var(--white);
+  --color-bg-hero: var(--cream-50);
+  --color-bg-cream: var(--cream-100);
+  --color-bg-muted: var(--gray-50);
+  --color-bg-inverse: var(--ink-900);
+  --color-bg-image-placeholder: var(--cream-200);
+  --color-text-primary: var(--gray-900);
+  --color-text-heading: var(--gray-900);
+  --color-text-body: var(--gray-600);
+  --color-text-inverse: var(--white);
+  --color-text-accent: var(--gold-700);
+  --color-text-accent-on-dark: var(--gold-300);
+  --color-text-price: var(--black);
+  --color-icon-accent: var(--gold-600);
+  --color-icon-primary: var(--gray-900);
+  --color-rating-star: var(--gold-400);
+  --color-border-default: var(--gray-200);
+  --color-border-strong: var(--ink-900);
+  --color-border-cream: var(--cream-300);
+  --color-action-primary: var(--ink-900);
+  --color-action-primary-hover: var(--ink-800);
+  --color-action-on-primary: var(--white);
+  --color-status-stock: var(--green-600);
+  --color-status-sale: var(--red-600);
+  --color-status-sale-subtle: var(--red-50);
+  --color-status-price-old: var(--red-700);
+  --color-status-gift: var(--gold-600);
+  --color-status-new: var(--ink-900);
+  --color-status-error: var(--red-600);
+  --color-badge-shipping: var(--ink-900);
+  --color-badge-bulk: var(--green-700);
+  --color-badge-sale: var(--red-600);
+  --color-badge-new: var(--blue-700);
+  --color-badge-gift: var(--bronze-700);
+  --color-badge-bestseller: var(--ink-900);
+  --color-badge-keyline: var(--white);
+  --color-focus-ring: var(--ink-900);
+  --color-focus-ring-on-dark: var(--white);
+
+  /* Dimension */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-30: 120px;
+  --radius-none: 0px;
+  --radius-full: 999px;
+  --layout-container: 1312px;
+  --layout-margin-desktop: 64px;
+  --layout-margin-mobile: 16px;
+  --layout-gutter: 20px;
+  --section-y-desktop: var(--space-16);
+  --section-y-desktop-tinted: var(--space-24);
+  --section-y-mobile: var(--space-10);
+  --section-y-mobile-tinted: var(--space-12);
+  --section-gap-desktop: var(--space-8);
+  --section-gap-mobile: var(--space-5);
+  --section-gap-desktop-text: var(--space-10);
+
+  /* Komponentové tokeny (stopy přechodů a stíny z Figmy) */
+  --hero-grad-mid: #F5EFE2;     /* Hero desktop, stop 55 % */
+  --hero-fade: #F4EDDF;         /* přechod na levém okraji fotky */
+  --hero-grad-end-m: #EFE7D9;   /* Hero mobil, spodní stop */
+  --shadow-badge: 0 2px 6px rgb(18 15 13 / .18);          /* Shadow/Badge */
+  --shadow-panel: 0 16px 40px rgb(28 28 40 / .14);        /* našeptávač */
+  --shadow-drawer: -8px 0 40px rgb(28 28 40 / .18);       /* mini košík */
+  --shadow-arrow: 0 4px 16px rgb(28 28 40 / .18);         /* šipka karuselu */
+  --overlay: rgb(28 28 40 / .45);                         /* bg/inverse 45 % */
+
+  /* Typografie */
+  --font-serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-sans: "Figtree", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+
+  /* Pohyb */
+  --dur-fast: 150ms;    /* barvy, rámečky */
+  --dur-panel: 200ms;   /* mega menu, našeptávač, košík, akordeon */
+  --dur-zoom: 300ms;    /* zoom fotky na kartě */
+  --ease-out: cubic-bezier(.2, .7, .2, 1);
+
+  /* Rozložení */
+  --gutter: var(--layout-margin-mobile);
+  --section-y: var(--section-y-mobile);
+  --section-y-tinted: var(--section-y-mobile-tinted);
+  --section-gap: var(--section-gap-mobile);
+}
+
+@media (min-width: 768px) {
+  :root { --gutter: 32px; }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --gutter: var(--layout-margin-desktop);
+    --section-y: var(--section-y-desktop);
+    --section-y-tinted: var(--section-y-desktop-tinted);
+    --section-gap: var(--section-gap-desktop);
+  }
+}
