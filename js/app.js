@@ -126,7 +126,7 @@
     const results = $('[data-search-results]');
     const form = $('[data-search-form]');
     if (!panel || !q) return;
-    const products = Object.entries(DATA).filter(([k]) => !k.startsWith('_')).map(([id, p]) => ({ id, ...p, key: norm(p.name + ' ' + p.desc) }));
+    const products = Object.entries(DATA).filter(([k]) => !k.startsWith('_')).map(([id, p]) => ({ id, ...p, key: norm(p.name + ' ' + p.desc + ' ' + (p.use || '')) }));
     const cats = DATA._cats.map((c) => ({ ...c, key: norm(c.name) }));
     let active = -1;
     let opener = null;
@@ -566,6 +566,16 @@
   initTabs();
   initCarousels();
   initCart();
+  // Nastavení cookies a výběr země: napojí se na cookie lištu a přepínač měny Shoptetu
+  $$('[data-cookie-settings]').forEach((b) => b.addEventListener('click', () => document.dispatchEvent(new CustomEvent('anj:cookie-settings'))));
+  // jazyk a měna: hlavička, mobilní menu a patička drží stejnou hodnotu
+  ['lang', 'cur'].forEach((k) => {
+    const sels = $$(`[data-${k}]`);
+    sels.forEach((s) => s.addEventListener('change', () => {
+      sels.forEach((o) => { o.value = s.value; });
+      document.dispatchEvent(new CustomEvent('anj:locale', { detail: { lang: $('[data-lang]').value, currency: $('[data-cur]').value } }));
+    }));
+  });
   initFooter();
   initNewsletter();
 })();

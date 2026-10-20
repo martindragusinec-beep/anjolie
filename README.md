@@ -19,6 +19,9 @@ Fonty: Newsreader (nadpisy) a Figtree (text) z Google Fonts. Na produkci doporu�
 - **Záložky Doporučujeme** (Nejprodávanější / Novinky / Akce): ARIA tabs, šipky, Home/End. Obsah karuselů plnit z feedu.
 - **Newsletter**: validace při odeslání, `aria-invalid`, potvrzení. Napojit na e-mailový nástroj (double opt-in).
 - **Oznamovací lišta**: na desktopu tři zprávy vedle sebe, na mobilu rotace po 5 s (zastaví se při `prefers-reduced-motion`).
+- **Jazyk a měna**: selecty `[data-lang]` (cs, sk, en) a `[data-cur]` (CZK, EUR) v horní liště (od 1200 px), v mobilním menu a v patičce. Hodnoty se synchronizují a vyvolá se událost `anj:locale` s `{ lang, currency }`, na kterou se napojí přepínač Shoptetu.
+- **Nastavení cookies**: tlačítko `[data-cookie-settings]` v patičce vyvolá událost `anj:cookie-settings`, napojit na cookie lištu.
+- **Loga plateb a dopravy**: soubory v `img/logos/` (viz README tam). Chybějící logo se automaticky nahradí textem s ikonou.
 
 ## Chování podle šířky
 
@@ -31,6 +34,10 @@ Fonty: Newsreader (nadpisy) a Figtree (text) z Google Fonts. Na produkci doporu�
 Fokus 2 px s odsazením 2 px, dotykové plochy min. 44 px, dialogy (menu, košík, hledání) s focus trapem a návratem fokusu, `prefers-reduced-motion` vypíná animace a rotaci lišty.
 
 ## K ověření před nasazením
+
+- PSČ sídla v patičce: v obchodních podmínkách je jednou 242 52 a jednou 252 42 (Jesenice u Prahy má 252 42)
+- Texty "k čemu produkt je" na kartách jsou z popisů na anjolie.cz, před spuštěním je projít proti povoleným zdravotním tvrzením (nařízení 1924/2006)
+- Logo PPL doplnit do `img/logos/ppl.svg`
 
 - URL recenzí na Heurece: `https://obchody.heureka.cz/anjolie-cz/recenze/` (neověřeno)
 - URL produktů a kategorií odpovídají struktuře anjolie.cz, zkontrolovat proti aktuálnímu webu
