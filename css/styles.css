@@ -430,7 +430,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 }
 
 /* ---------- Kategorie ---------- */
-.cats { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none; margin-inline: calc(-1 * max(var(--gutter), env(safe-area-inset-left, 0px))); padding-inline: max(var(--gutter), env(safe-area-inset-left, 0px)); }
+.cats { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none; margin-inline: calc(-1 * max(var(--gutter), env(safe-area-inset-left, 0px))); padding-inline: max(var(--gutter), env(safe-area-inset-left, 0px)); scroll-padding-inline: max(var(--gutter), env(safe-area-inset-left, 0px)); }
 .cats::-webkit-scrollbar { display: none; }
 .cat { flex: 0 0 104px; display: flex; flex-direction: column; align-items: center; gap: 12px; scroll-snap-align: start; text-align: center; }
 .cat__img { position: relative; display: block; width: 100%; aspect-ratio: 1; border-radius: var(--radius-full); }
